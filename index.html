@@ -19,17 +19,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <script type="text/javascript" defer>
+    <script type="text/javascript">
       $.get('https://api.github.com/repos/spiralhalo/LumiLightsPBR/releases/latest', function (data) {
-        $('#lumi_url').attr("href", data.html_url);
+        // $('#lumi_url').attr("href", data.html_url);
         $('#lumi_ver').text(data.tag_name);
       });
       $.get('https://api.github.com/repos/spiralhalo/LumiPBRExt/releases/latest', function (data) {
-        $('#ext_url').attr("href", data.html_url);
+        // $('#ext_url').attr("href", data.html_url);
         $('#ext_ver').text(data.tag_name);
       });
       $.get('https://api.github.com/repos/spiralhalo/LumiPBRCompat/releases/latest', function (data) {
-        $('#compat_url').attr("href", data.html_url);
+        // $('#compat_url').attr("href", data.html_url);
         $('#compat_ver').text(data.tag_name);
       });
     </script>
@@ -70,26 +70,19 @@
           <div class="column">
             <div class="notification px-5">
 
-              <h1 class="title has-text-centered ml-6">
+              <h1 class="title has-text-centered">
                 Lumi Lights
-                <div class="tag has-addons">
-                  <div id="lumi_ver" class="tag is-black is-medium">Version</div>
-                </div>
+                <div id="lumi_ver" class="tag is-primary">ver</div>
               </h1>
 
               <div class="content">
                 <p>Base Lumi Lights shader. Replaces vanilla lighting.</p>
+                <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiLightsPBR/blob/unified/README.md">View Readme</a>
               </div>
 
-              <div class="columns">
+              <div class="columns is-gapless">
                 <div class="column">
-                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiLightsPBR/blob/unified/README.md">View Readme</a>
-                </div>
-              </div>
-
-              <div class="columns">
-                <div class="column">
-                  <a class="button is-fullwidth is-black" href="https://github.com/spiralhalo/LumiLightsPBR/releases">Releases</a>
+                  <a class="button is-fullwidth is-primary" href="https://github.com/spiralhalo/LumiLightsPBR/releases">Releases</a>
                 </div>
                 <div class="column">
                   <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiLightsPBR">Source</a>
@@ -102,26 +95,19 @@
           <div class="column">
             <div class="notification px-5">
 
-              <h1 class="title has-text-centered ml-6">
+              <h1 class="title has-text-centered">
                 Lumi PBR Ext
-                <div class="tag has-addons">
-                  <div id="ext_ver" class="tag is-black is-medium">Version</div>
-                </div>
+                <div id="ext_ver" class="tag is-primary">ver</div>
               </h1>
 
               <div class="content">
-                <p>PBR material for vanilla blocks. <b>Requires Lumi Lights.</b></p>
+                <p>PBR material for vanilla blocks and stuff. <b>Requires Lumi Lights.</b></p>
+                <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRExt/blob/master/README.md">View Readme</a>
               </div>
 
-              <div class="columns">
+              <div class="columns is-gapless">
                 <div class="column">
-                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRExt/blob/master/README.md">View Readme</a>
-                </div>
-              </div>
-
-              <div class="columns">
-                <div class="column">
-                  <a class="button is-fullwidth is-black" href="https://github.com/spiralhalo/LumiPBRExt/releases">Releases</a>
+                  <a class="button is-fullwidth is-primary" href="https://github.com/spiralhalo/LumiPBRExt/releases">Releases</a>
                 </div>
                 <div class="column">
                   <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRExt">Source</a>
@@ -134,26 +120,19 @@
           <div class="column">
             <div class="notification px-5">
 
-              <h1 class="title has-text-centered ml-6">
+              <h1 class="title has-text-centered">
                 Lumi PBR Compat
-                <div class="tag has-addons">
-                  <div id="compat_ver" class="tag is-black is-medium">Version</div>
-                </div>
+                <div id="compat_ver" class="tag is-primary">ver</div>
               </h1>
 
               <div class="content">
-                <p>PBR materials for mods. <b>Requires Lumi PBR Ext.</b></p>
-              </div>
-              
-              <div class="columns">
-                <div class="column">
-                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRCompat/blob/master/README.md">View Readme</a>
-                </div>
+                <p>PBR materials for supported mods. <b>Requires Lumi PBR Ext.</b></p>
+                <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRCompat/blob/master/README.md">View Readme</a>
               </div>
 
-              <div class="columns">
+              <div class="columns is-gapless">
                 <div class="column">
-                  <a class="button is-fullwidth is-black" href="https://github.com/spiralhalo/LumiPBRCompat/releases">Releases</a>
+                  <a class="button is-fullwidth is-primary" href="https://github.com/spiralhalo/LumiPBRCompat/releases">Releases</a>
                 </div>
                 <div class="column">
                   <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRCompat">Source</a>
@@ -166,13 +145,13 @@
       </div>
     </div>
 
-    <div class="hero is-small is-black">
+    <div class="hero is-black">
       <div class="hero-body">
         <div class="container">
           Lumi Lights developed and maintained by spiralhalo<br>
           Site updated 12-21-2020<br>
           Website designed by NeusFear<br>
-          and then ruined by spiralhalo
+          <div class="is-small">and then ruined by spiralhalo</div>
         </div>
       </div>
     </div>
