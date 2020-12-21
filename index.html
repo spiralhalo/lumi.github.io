@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
       $.get('https://api.github.com/repos/spiralhalo/LumiLightsPBR/releases/latest', function (data) {
         $('#lumi_url').attr("href", data.html_url);
         $('#lumi_ver').text(data.tag_name);
@@ -77,7 +77,13 @@
               </h1>
 
               <div class="content">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                <p>Base Lumi Lights shader. Replaces vanilla lighting.</p>
+              </div>
+
+              <div class="columns">
+                <div class="column">
+                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiLightsPBR/blob/unified/README.md">View Readme</a>
+                </div>
               </div>
 
               <div class="columns">
@@ -103,7 +109,13 @@
               </h1>
 
               <div class="content">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                <p>PBR material for vanilla blocks. <b>Requires Lumi Lights.</b></p>
+              </div>
+
+              <div class="columns">
+                <div class="column">
+                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRExt/blob/master/README.md">View Readme</a>
+                </div>
               </div>
 
               <div class="columns">
@@ -129,7 +141,13 @@
               </h1>
 
               <div class="content">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                <p>PBR materials for mods. <b>Requires Lumi PBR Ext.</b></p>
+              </div>
+              
+              <div class="columns">
+                <div class="column">
+                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRCompat/blob/master/README.md">View Readme</a>
+                </div>
               </div>
 
               <div class="columns">
@@ -150,9 +168,10 @@
     <div class="hero is-small is-black">
       <div class="hero-body">
         <div class="container">
-          Lumilights developed and maintained by spiralhalo<br>
+          Lumi Lights developed and maintained by spiralhalo<br>
           Site updated 12-21-2020<br>
-          Website designed by NeusFear
+          Website designed by NeusFear<br>
+          and then ruined by spiralhalo
         </div>
       </div>
     </div>
