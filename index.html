@@ -1,117 +1,145 @@
-<html><head>
-  <title>Lumi Lights shader for Canvas</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <meta property="og:title" content="Lumi Lights">
-  <meta property="og:site_name" content="Lumi Lights">
-  <meta property="og:url" content="https://spiralhalo.github.io/">
-  <meta property="og:description" content="Links to the latest releases of Lumi Lights—a shader pack for the fabric-based Canvas rendering engine.">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://spiralhalo.github.io/android-chrome-192x192.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&amp;display=swap" rel="stylesheet"> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    $.get('https://api.github.com/repos/spiralhalo/LumiLightsPBR/releases/latest', function (data) {
-      $('#lumi_url').attr("href", data.html_url);
-      $('#lumi_ver').text(data.tag_name);
-    });
-    $.get('https://api.github.com/repos/spiralhalo/LumiPBRExt/releases/latest', function (data) {
-      $('#ext_url').attr("href", data.html_url);
-      $('#ext_ver').text(data.tag_name);
-    });
-    $.get('https://api.github.com/repos/spiralhalo/LumiPBRCompat/releases/latest', function (data) {
-      $('#compat_url').attr("href", data.html_url);
-      $('#compat_ver').text(data.tag_name);
-    });
-  </script>
-  <style>
-    body {
-      margin: 0;
-      background-image: url("background.jpg");
-      background-size: cover;
-      font-family: 'Roboto', sans-serif;
-      color: #ffffff;
-      font-weight: 300;
-      text-align: center;
-    }
-    a {
-      color: #ffffff;
-      position: relative;
-      text-decoration: none;
-    }
-    a:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0%;
-      border-bottom: 0.02em solid #ffffff;
-      transition: 0.4s;
-    }
-    a:hover:after {
-      left: 0%;
-      width: 100%;
-    }
-    ul {
-      padding: 2vw;
-    }
-    .b>span>a {
-      font-weight: 400;
-    }
-    .overlay {
-      background-color: #00000066;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .a {
-      font-size: 6vw;
-      padding: 0.8vw;
-    }
-    .content {
-      width: 60%;
-    }
-    .b {
-      font-size: 3vw;
-      border: white;
-      border-style: solid;
-      border-width: 0.1em;
-      border-radius: 1vw;
-      margin: 0 auto;
-      padding: 0.8vw;
-    }
-    .pbr {
-      font-weight: 500;
-      font-size: 70%;
-    }
-    .version {
-      padding: 0 1%;
-      font-weight: 500;
-      font-size: 40%;
-      color: black;
-      background-color: #aaffff;
-      mix-blend-mode: screen;
-      border-radius: 1vw;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <div class="content">
-      <div class="a"><a id="lumi_url" href="https://github.com/spiralhalo/LumiLightsPBR">Lumi Lights&nbsp;<span class="pbr">PBR</span>&nbsp;<span id="lumi_ver" class="version">...</span></a></div>
-      <div class="b">Main shader pack (required)</div>
-      <div class="a"><a id="ext_url" href="https://github.com/spiralhalo/LumiPBRExt">Lumi&nbsp;<span class="pbr">PBR EXT</span>&nbsp;<span id="ext_ver" class="version">...</span></a></div>
-      <div class="b">PBR materials for vanilla</div>
-      <div class="a"><a id="compat_url" href="https://github.com/spiralhalo/LumiPBRCompat">Lumi&nbsp;<span class="pbr">COMPAT</span>&nbsp;<span id="compat_ver" class="version">...</span></a></div>
-      <div class="b">PBR materials for supported mods</div>
+<html>
+  <head>
+    <title>Lumi Lights shader for Canvas</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Lumi Lights">
+    <meta property="og:site_name" content="Lumi Lights">
+    <meta property="og:url" content="https://spiralhalo.github.io/">
+    <meta property="og:description" content="Links to the latest releases of Lumi Lights—a shader pack for the fabric-based Canvas rendering engine.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://spiralhalo.github.io/android-chrome-192x192.png">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $.get('https://api.github.com/repos/spiralhalo/LumiLightsPBR/releases/latest', function (data) {
+        $('#lumi_url').attr("href", data.html_url);
+        $('#lumi_ver').text(data.tag_name);
+      });
+      $.get('https://api.github.com/repos/spiralhalo/LumiPBRExt/releases/latest', function (data) {
+        $('#ext_url').attr("href", data.html_url);
+        $('#ext_ver').text(data.tag_name);
+      });
+      $.get('https://api.github.com/repos/spiralhalo/LumiPBRCompat/releases/latest', function (data) {
+        $('#compat_url').attr("href", data.html_url);
+        $('#compat_ver').text(data.tag_name);
+      });
+    </script>
+
+    <style>
+      .background{
+        background-image: url('background.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        min-height: 89vh !important;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="hero is-small is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-centered">
+            LumiLights
+          </h1>
+          <h2 class="subtitle has-text-centered">
+            Latest Versions
+          </h2>
+        </div>
+      </div>
     </div>
-  </div>
-</body></html>
+
+    <div class="section is-warning background">
+      <div class="hero-body">
+        <div class="columns is-variable is-8 is-1 mobile">
+
+          <div class="column">
+            <div class="notification">
+
+              <h1 class="title has-text-centered ml-6">
+                PBR
+                <div class="tag has-addons">
+                  <div class="tag is-primary is-medium">Version</div>
+                  <div id="lumi_ver" class="tag is-primary is-light is-medium">0.0</div>
+                </div>
+              </h1>
+
+              <div class="content">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              </div>
+
+              <a id="lumi_url" href="https://github.com/spiralhalo/LumiLightsPBR" class="button is-primary is-fullwidth">
+                Go to Source
+              </a>
+
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="notification">
+
+              <h1 class="title has-text-centered ml-6">
+                EXT
+                <div class="tag has-addons">
+                  <div class="tag is-primary is-medium">Version</div>
+                  <div id="ext_ver" class="tag is-primary is-light is-medium">0.0</div>
+                </div>
+              </h1>
+
+              <div class="content">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              </div>
+
+              <a id="ext_url" href="https://github.com/spiralhalo/LumiPBRExt" class="button is-primary is-fullwidth">
+                Go to Source
+              </a>
+
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="notification">
+
+              <h1 class="title has-text-centered ml-6">
+                COMPAT
+                <div class="tag has-addons">
+                  <div class="tag is-primary is-medium">Version</div>
+                  <div id="compat_ver" class="tag is-primary is-light is-medium">0.0</div>
+                </div>
+              </h1>
+
+              <div class="content">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              </div>
+
+              <a id="compat_url" href="https://github.com/spiralhalo/LumiPBRCompat" class="button is-primary is-fullwidth">
+                Go to Source
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero is-small is-primary">
+      <div class="hero-body">
+        <div class="container">
+          Lumilights developed and maintained by spiralhalo<br>
+          Site updated 12-21-2020<br>
+          Website designed by NeusFear
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
