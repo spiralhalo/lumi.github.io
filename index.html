@@ -35,6 +35,10 @@
       margin: 0;
       background-image: url("background.jpg");
       background-size: cover;
+      font-family: 'Roboto', sans-serif;
+      color: #ffffff;
+      font-weight: 300;
+      text-align: center;
     }
     a {
       color: #ffffff;
@@ -47,31 +51,42 @@
       bottom: 0;
       left: 50%;
       width: 0%;
-      border-bottom: 2px solid #ffffff;
+      border-bottom: 0.02em solid #ffffff;
       transition: 0.4s;
     }
     a:hover:after {
       left: 0%;
       width: 100%;
     }
+    ul {
+      padding: 2vw;
+    }
     .b>span>a {
       font-weight: 400;
     }
     .overlay {
       background-color: #00000066;
-      width: 100%;
       height: 100%;
+      width: 100%;
       display: flex;
       align-items: center;
-      justify-content:center;
+      justify-content: center;
     }
     .a {
-      font-size: 8vw;
-      margin: 0.1vw;
-      text-align:center;
-      font-weight: 300;
-      font-family: 'Roboto', sans-serif;
-      color: #ffffff;
+      font-size: 6vw;
+      padding: 0.8vw;
+    }
+    .content {
+      width: 60%;
+    }
+    .b {
+      font-size: 3vw;
+      border: white;
+      border-style: solid;
+      border-width: 0.1em;
+      border-radius: 1vw;
+      margin: 0 auto;
+      padding: 0.8vw;
     }
     .pbr {
       font-weight: 500;
@@ -82,8 +97,6 @@
       font-weight: 500;
       font-size: 40%;
       color: black;
-      position: absolute;
-      bottom: 20%;
       background-color: #aaffff;
       mix-blend-mode: screen;
       border-radius: 1vw;
@@ -93,9 +106,12 @@
 <body>
   <div class="overlay">
     <div class="content">
-      <div class="a"><a id="lumi_url" href="https://github.com/spiralhalo/LumiLightsPBR">Lumi Lights <span class="pbr">PBR</span> <span id="lumi_ver" class="version">...</span></a></div>
-      <div class="a"><a id="ext_url" href="https://github.com/spiralhalo/LumiPBRExt">Lumi <span class="pbr">PBR EXT</span> <span id="ext_ver" class="version">...</span></a></div>
-      <div class="a"><a id="compat_url" href="https://github.com/spiralhalo/LumiPBRCompat">Lumi <span class="pbr">COMPAT</span> <span id="compat_ver" class="version">...</span></a></div>
+      <div class="a"><a id="lumi_url" href="https://github.com/spiralhalo/LumiLightsPBR">Lumi Lights&nbsp;<span class="pbr">PBR</span>&nbsp;<span id="lumi_ver" class="version">...</span></a></div>
+      <div class="b">Main shader pack (required)</div>
+      <div class="a"><a id="ext_url" href="https://github.com/spiralhalo/LumiPBRExt">Lumi&nbsp;<span class="pbr">PBR EXT</span>&nbsp;<span id="ext_ver" class="version">...</span></a></div>
+      <div class="b">PBR materials for vanilla</div>
+      <div class="a"><a id="compat_url" href="https://github.com/spiralhalo/LumiPBRCompat">Lumi&nbsp;<span class="pbr">COMPAT</span>&nbsp;<span id="compat_ver" class="version">...</span></a></div>
+      <div class="b">PBR materials for supported mods</div>
     </div>
   </div>
 </body></html>
