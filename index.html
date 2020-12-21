@@ -3,27 +3,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&amp;display=swap" rel="stylesheet"> 
   <style>
     body {
-      background-color: #000000;
+      margin: 0;
+      background-image: url("background.jpg");
+      background-size: cover;
     }
-    p {
+    a {
+      color: #ffffff;
+      position: relative;
+      text-decoration: none;
+    }
+    a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0%;
+      border-bottom: 2px solid #ffffff;
+      transition: 0.4s;
+    }
+    a:hover:after {
+      left: 0%;
+      width: 100%;
+    }
+    .b>span>a {
+      font-weight: 400;
+    }
+    .overlay {
+      background-color: #00000066;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+    }
+    .a {
+      font-size: 8vw;
+      margin: 0.1vw;
       text-align:center;
       font-weight: 300;
       font-family: 'Roboto', sans-serif;
       color: #ffffff;
     }
-    .a {
-      font-size: 10em;
+    .pbr {
+      font-weight: 500;
+      font-size: 70%;
     }
-    .b {
-      font-size: 5em;
-    }
-    .c {
-      padding: 1em;
+    .version {
+      padding: 0 1%;
+      font-weight: 500;
+      font-size: 40%;
+      color: black;
+      position: absolute;
+      bottom: 20%;
+      background-color: #aaffff;
+      mix-blend-mode: screen;
+      border-radius: 1vw;
     }
   </style>
 </head>
 <body>
-  <div>
-    <p class="a">Lumi Lights</p><p class="b"><span class="c">Download</span> | <span class="c">Readme</span></p>
+  <div class="overlay">
+    <div class="content">
+      <div class="a"><a href="https://github.com/spiralhalo/LumiLightsPBR">Lumi Lights <span class="pbr">PBR</span> <span class="version">v0.5</span></a></div>
+      <div class="a"><a href="https://github.com/spiralhalo/LumiPBRExt">Lumi <span class="pbr">PBR EXT</span> <span class="version">v0.3</span></a></div>
+      <div class="a"><a href="https://github.com/spiralhalo/LumiPBRCompat">Lumi <span class="pbr">COMPAT</span> <span class="version">v0.2</span></a></div>
+    </div>
   </div>
 </body></html>
