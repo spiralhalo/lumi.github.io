@@ -1,159 +1,79 @@
-<html>
-  <head>
-    <title>Lumi Lights shader for Canvas</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Lumi Lights">
-    <meta property="og:site_name" content="Lumi Lights">
-    <meta property="og:url" content="https://spiralhalo.github.io/">
-    <meta property="og:description" content="Links to the latest releases of Lumi Lights—a shader pack for the fabric-based Canvas rendering engine.">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="https://spiralhalo.github.io/android-chrome-192x192.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-    <script type="text/javascript">
-      $.get('https://api.github.com/repos/spiralhalo/LumiLights/releases/latest', function (data) {
-        // $('#lumi_url').attr("href", data.html_url);
-        $('#lumi_ver').text(data.tag_name);
-      });
-      $.get('https://api.github.com/repos/spiralhalo/LumiPBRExt/releases/latest', function (data) {
-        // $('#ext_url').attr("href", data.html_url);
-        $('#ext_ver').text(data.tag_name);
-      });
-      $.get('https://api.github.com/repos/spiralhalo/LumiPBRCompat/releases/latest', function (data) {
-        // $('#compat_url').attr("href", data.html_url);
-        $('#compat_ver').text(data.tag_name);
-      });
-    </script>
+<head>
+  <title>Lumi Lights shader for Canvas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Lumi Lights">
+  <meta property="og:site_name" content="Lumi Lights">
+  <meta property="og:url" content="https://spiralhalo.github.io/">
+  <meta property="og:description" content="Links to the latest releases of Lumi Lights—a shader pack for the fabric-based Canvas rendering engine.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://spiralhalo.github.io/android-chrome-192x192.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
 
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-      body{
-        font-family: 'Roboto', sans-serif;
-      }
-      .background{
-        background-image: url('background.jpg'); 
-        background-size: cover; 
-        background-position: center; 
-        min-height: 89vh !important;
-      }
-    </style>
-  </head>
+<body>
+  <header class="invert">
+    <h1>Lumi Lights</h1>
+    <p>Latest Versions</p>
+  </header>
 
-  <body>
-
-    <div class="hero is-small is-black">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title has-text-centered">
-            Lumi Lights
-          </h1>
-          <h2 class="subtitle has-text-centered">
-            Latest Versions
-          </h2>
+  <main>
+    <div class="wrapper">
+      <article data-repo="LumiLights">
+        <h3>Lumi Lights <span class="badge"></span></h3>
+        <p>
+          Base Lumi Lights shader. Replaces vanilla lighting.<br>
+          <a href="https://github.com/spiralhalo/LumiLights/blob/unified/README.md">Read More</a>
+        </p>
+        <div class="buttons">
+          <a href="https://github.com/spiralhalo/LumiLights/releases" class="primary">Releases</a>
+          <a href="https://github.com/spiralhalo/LumiLights" class="secondary">Source</a>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <div class="section is-warning background">
-      <div class="hero-body">
-        <div class="columns is-variable is-8 is-1 mobile">
-
-          <div class="column">
-            <div class="notification px-5">
-
-              <h1 class="title has-text-centered">
-                Lumi Lights
-                <div id="lumi_ver" class="tag is-primary">ver</div>
-              </h1>
-
-              <div class="content">
-                <p>Base Lumi Lights shader. Replaces vanilla lighting.</p>
-                <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiLights/blob/unified/README.md">View Readme</a>
-              </div>
-
-              <div class="columns is-gapless">
-                <div class="column">
-                  <a class="button is-fullwidth is-primary" href="https://github.com/spiralhalo/LumiLights/releases">Releases</a>
-                </div>
-                <div class="column">
-                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiLights">Source</a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="notification px-5">
-
-              <h1 class="title has-text-centered">
-                Lumi PBR Ext
-                <div id="ext_ver" class="tag is-primary">ver</div>
-              </h1>
-
-              <div class="content">
-                <p>PBR material for vanilla blocks and stuff. <b>Requires Lumi Lights.</b></p>
-                <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRExt/blob/master/README.md">View Readme</a>
-              </div>
-
-              <div class="columns is-gapless">
-                <div class="column">
-                  <a class="button is-fullwidth is-primary" href="https://github.com/spiralhalo/LumiPBRExt/releases">Releases</a>
-                </div>
-                <div class="column">
-                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRExt">Source</a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="notification px-5">
-
-              <h1 class="title has-text-centered">
-                Lumi PBR Compat
-                <div id="compat_ver" class="tag is-primary">ver</div>
-              </h1>
-
-              <div class="content">
-                <p>PBR materials for supported mods. <b>Requires Lumi PBR Ext.</b></p>
-                <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRCompat/blob/master/README.md">View Readme</a>
-              </div>
-
-              <div class="columns is-gapless">
-                <div class="column">
-                  <a class="button is-fullwidth is-primary" href="https://github.com/spiralhalo/LumiPBRCompat/releases">Releases</a>
-                </div>
-                <div class="column">
-                  <a class="button is-fullwidth" href="https://github.com/spiralhalo/LumiPBRCompat">Source</a>
-                </div>
-              </div>
-
-            </div>
-          </div>
+      <article data-repo="LumiPBRExt">
+        <h3>Lumi PBR Ext <span class="badge"></span></h3>
+        <p>
+          PBR material for vanilla blocks and stuff. <strong>Requires Lumi Lights.</strong><br>
+          <a href="https://github.com/spiralhalo/LumiPBRExt/blob/master/README.md">Read More</a>
+        </p>
+        <div class="buttons">
+          <a href="https://github.com/spiralhalo/LumiPBRExt/releases" class="primary">Releases</a>
+          <a href="https://github.com/spiralhalo/LumiPBRExt" class="secondary">Source</a>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <div class="hero is-black">
-      <div class="hero-body">
-        <div class="container">
-          Lumi Lights developed and maintained by spiralhalo<br>
-          Site updated 12-21-2020<br>
-          Website designed by NeusFear<br>
+      <article data-repo="LumiPBRCompat">
+        <h3>Lumi PBR Compat <span class="badge"></span></h3>
+        <p>
+          PBR materials for supported mods. <strong>Requires Lumi PBR Ext.</strong><br>
+          <a href="https://github.com/spiralhalo/LumiPBRCompat/blob/master/README.md">Read More</a>
+        </p>
+        <div class="buttons">
+          <a href="https://github.com/spiralhalo/LumiPBRCompat/releases" class="primary">Releases</a>
+          <a href="https://github.com/spiralhalo/LumiPBRCompat" class="secondary">Source</a>
         </div>
-      </div>
+      </article>
     </div>
+  </main>
+  
+  <footer class="invert">
+    <p>Lumi Lights developed and maintained by spiralhalo</p>
+    <p>Site updated <time datetime="2020-12-23">12-23-2020</time></p>
+    <p>Website designed with &hearts; using pure HTML, CSS, and Javascript</p>
+  </footer>
+</body>
 
-  </body>
 </html>
