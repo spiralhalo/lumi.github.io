@@ -26,7 +26,7 @@
     --text-color: var(--gray-lite);
     --border-color: var(--gray-lite);
     --bg-accent: var(--gray-medl);
-    --text-accent: var(--gray-dark);
+    --text-accent: var(--theme-dark);
     --border-accent: black;
 }
 
@@ -94,6 +94,7 @@ footer {
     padding: 1.5rem;
 }
 footer > p { font-size: 1rem; }
+footer a { text-decoration: none; }
 
 .wrapper {
     max-width: 85rem;
