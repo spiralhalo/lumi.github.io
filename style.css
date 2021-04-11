@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-:root {
+:root,
+.default {
     --theme-hue: 13;
     --theme-sat: 72.3%;
     --theme-shade: 56.9%;
@@ -49,6 +50,20 @@
     --border-accent: var(--gray-medd);
 }
 
+.invert_secondary {
+    /* Inverted Secondary Palette */
+    --bg-color: var(--gray-dark);
+    --bg-accent: var(--gray-medd);
+    --text-color: var(--gray-medl);
+    --border-color: var(--gray-medd);
+    --text-accent: var(--gray-lite);
+    --border-accent: var(--gray-medl);
+}
+
+.invisible {
+    background: transparent;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -57,10 +72,14 @@ body {
     font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
-	min-height: 100vh;
+    min-height: 100vh;
 }
 body * { color: var(--text-color); }
 a { color: var(--text-accent); }
+
+strong {
+    font-weight: bold;
+}
 
 header {
     background-color: var(--bg-color);
@@ -79,10 +98,18 @@ header > p { font-size: 1.25rem; }
 
 main {
     background-image: url("background.jpg");
-	background-size: cover;
-	background-position: center;
+    background-size: cover;
+    background-position: center;
     padding: 0 1.5rem;
     flex-grow: 1;
+}
+
+.dev {
+    background-image: linear-gradient(to bottom, #000000, transparent), url('img/screen0.jpg');
+}
+
+.legacy {
+    background-image: linear-gradient(to bottom, #ffffff, transparent), url('img/legacy.jpg');
 }
 
 footer {
@@ -100,12 +127,18 @@ footer a { text-decoration: none; }
     max-width: 85rem;
     margin: 3.5em auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3rem;
+}
+
+.major > .wrapper {
+    margin: 3.5em auto 0 auto;
 }
 
 article {
     background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center;
     border-radius: .5rem;
     padding: 1.5rem;
 }
@@ -120,6 +153,22 @@ article > h3 {
     margin: 0;
 }
 
+article.major > h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 2rem;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 0;
+}
+
+article.major > p {
+    font-size: 1.2rem;
+    max-width: 40rem;
+}
+
+.badge-inactive,
 .badge {
     background: var(--theme-color);
     color: var(--gray-lite);
