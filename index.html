@@ -31,57 +31,130 @@
 
   <main>
     <div class="wrapper">
-      <article data-repo="LumiLights">
-        <h3>Lumi Lights <span class="badge"></span></h3>
+      <article class="invert dev major">
+        <h3>Lumi Lights DEV</h3>
         <p>
-          Base Lumi Lights shader. Replaces vanilla lighting.<br>
-          <a href="https://github.com/spiralhalo/LumiLights/blob/unified/README.md">Read More</a>
+          In-development Canvas custom rendering pipeline for visual fidelity improvements. Supports volumetric lighting, clouds, reflections, ambient occlusion, and more.
+          <br>
+          <br>
+          <strong>Compatible with:</strong>
+          <br>
+          <strong>For 21w10a+: </strong>Canvas version 1.0.1517 (<a href="https://github.com/grondag/canvas/releases/tag/1.0.1517-snapshot-unstable">github</a>)
+          <br>
+          <strong>For 1.16: </strong>Canvas version 1.0.1492 (<a href="https://github.com/grondag/canvas/releases/tag/1.0.1492-unstable">github</a>)
         </p>
-        <div class="buttons">
-          <a href="https://github.com/spiralhalo/LumiLights/releases" class="primary">Releases</a>
-          <a href="https://github.com/spiralhalo/LumiLights" class="secondary">Source</a>
+        <div class="wrapper">
+          <article class="invert">
+            <h3>Lumi Lights <span class="badge-inactive">wip</span></h3>
+            <p>
+              Base Lumi Lights pack with base pipeline and experimental shadow-enabled pipelines. PBR extension support is included.<br>
+              <a href="https://github.com/spiralhalo/LumiLights/blob/unified/README.md">Read More</a>
+            </p>
+            <div class="buttons">
+              <a href="https://github.com/spiralhalo/LumiLights/releases" class="primary">Releases</a>
+              <a href="https://github.com/spiralhalo/LumiLights" class="invert_secondary">Source</a>
+            </div>
+          </article>
+
+          <article class="invert" data-repo="LumiPBRExt">
+            <h3>Lumi PBR Ext <span class="badge-inactive">wip</span></h3>
+            <p>
+              PBR extension adds roughness and metalness support into material shaders. This base PBR Ext pack contains materials for vanilla.
+              <br>
+              <strong>Requires Lumi Lights.</strong><br>
+              <a href="https://github.com/spiralhalo/LumiPBRExt/blob/master/README.md">Read More</a>
+            </p>
+            <div class="buttons">
+              <a href="https://github.com/spiralhalo/LumiPBRExt/releases" class="primary">Releases</a>
+              <a href="https://github.com/spiralhalo/LumiPBRExt" class="invert_secondary">Source</a>
+            </div>
+          </article>
+
+          <article class="invert" data-repo="LumiPBRCompat">
+            <h3>Lumi PBR Compat <span class="badge-inactive">wip</span></h3>
+            <p>
+              PBR materials for supported mods.
+              <br>
+              <strong>Requires Lumi PBR Ext.</strong><br>
+              <a href="https://github.com/spiralhalo/LumiPBRCompat/blob/master/README.md">Read More</a>
+            </p>
+            <div class="buttons">
+              <a href="https://github.com/spiralhalo/LumiPBRCompat/releases" class="primary">Releases</a>
+              <a href="https://github.com/spiralhalo/LumiPBRCompat" class="invert_secondary">Source</a>
+            </div>
+          </article>
         </div>
       </article>
-
-      <article data-repo="LumiPBRExt">
-        <h3>Lumi PBR Ext <span class="badge"></span></h3>
+    </div>
+    <div class="wrapper">
+      <article class="major legacy">
+        <h3>Lumi Lights OG</h3>
         <p>
-          PBR material for vanilla blocks and stuff. <strong>Requires Lumi Lights.</strong><br>
-          <a href="https://github.com/spiralhalo/LumiPBRExt/blob/master/README.md">Read More</a>
+          The original version of Lumi Lights. Created to enhance vanilla lighting and adds various simulated specular light to enhance the visual appearance of Minecraft using limited featureset of early Canvas.
+          <br>
+          <br>
+          <strong>Compatible with:</strong> Canvas version 1.0.1267 (<a href="https://www.curseforge.com/minecraft/mc-mods/canvas-renderer/files/3155365">curseforge</a>)
         </p>
-        <div class="buttons">
-          <a href="https://github.com/spiralhalo/LumiPBRExt/releases" class="primary">Releases</a>
-          <a href="https://github.com/spiralhalo/LumiPBRExt" class="secondary">Source</a>
+        <div class="wrapper">
+          <article class="default">
+            <h3>Lumi Lights <span class="badge-inactive">v0.14</span></h3>
+            <p>
+              Base Lumi Lights shader. Replaces vanilla lighting.<br>
+              <a href="https://github.com/spiralhalo/LumiLights/blob/unified/README.md">Read More</a>
+            </p>
+            <div class="buttons">
+              <a href="https://github.com/spiralhalo/LumiLights/releases/tag/v0.14" class="primary">Download</a>
+              <a href="https://github.com/spiralhalo/LumiLights/tree/unified" class="secondary">Source</a>
+            </div>
+          </article>
+
+          <article class="default" data-repo="LumiPBRExt">
+            <h3>Lumi PBR Ext <span class="badge-inactive">v0.7</span></h3>
+            <p>
+              PBR material for vanilla blocks and stuff. <strong>Requires Lumi Lights.</strong><br>
+              <a href="https://github.com/spiralhalo/LumiPBRExt/blob/og/README.md">Read More</a>
+            </p>
+            <div class="buttons">
+              <a href="https://github.com/spiralhalo/LumiPBRExt/releases/tag/v0.7" class="primary">Download</a>
+              <a href="https://github.com/spiralhalo/LumiPBRExt/tree/og" class="secondary">Source</a>
+            </div>
+          </article>
+
+          <article class="default" data-repo="LumiPBRCompat">
+            <h3>Lumi PBR Compat <span class="badge-inactive">v0.6</span></h3>
+            <p>
+              PBR materials for supported mods. <strong>Requires Lumi PBR Ext.</strong><br>
+              <a href="https://github.com/spiralhalo/LumiPBRCompat/blob/og/README.md">Read More</a>
+            </p>
+            <div class="buttons">
+              <a href="https://github.com/spiralhalo/LumiPBRCompat/releases/tag/v0.6" class="primary">Download</a>
+              <a href="https://github.com/spiralhalo/LumiPBRCompat/tree/og" class="secondary">Source</a>
+            </div>
+          </article>
         </div>
       </article>
-
-      <article data-repo="LumiPBRCompat">
-        <h3>Lumi PBR Compat <span class="badge"></span></h3>
-        <p>
-          PBR materials for supported mods. <strong>Requires Lumi PBR Ext.</strong><br>
-          <a href="https://github.com/spiralhalo/LumiPBRCompat/blob/master/README.md">Read More</a>
-        </p>
-        <div class="buttons">
-          <a href="https://github.com/spiralhalo/LumiPBRCompat/releases" class="primary">Releases</a>
-          <a href="https://github.com/spiralhalo/LumiPBRCompat" class="secondary">Source</a>
-        </div>
-      </article>
-
+    </div>
+    <div class="wrapper">
       <article class="invert">
-        <h3>Beta features</h3>
+        <h3>Community</h3>
         <p>
-          Advanced shader features are currently WIP (work-in-progress). Looking for those? You might be interested in beta-testing.<br>
+          Get support from fellow users, post screenshots, report issues, make suggestions, and more in the Lumi Lights discord community.<br>
         </p>
         <div class="buttons">
           <a href="https://discord.gg/qcyBfhxkgk" class="primary">Join Our Discord</a>
         </div>
+      </article>
+      <article class="invisible centered">
+        <img src="Lumi_AA_white.png">
+      </article>
+      <article class="invisible">
       </article>
     </div>
   </main>
   
   <footer class="invert">
     <p>Lumi Lights developed and maintained by spiralhalo</p>
-    <p>Site updated <time datetime="2021-1-17">1-17-2021</time></p>
+    <p>Site updated <time datetime="2021-4-11">4-11-2021</time></p>
     <p><a href="https://github.com/spiralhalo/spiralhalo.github.io">Website designed with &hearts; using pure HTML, CSS, and Javascript</a></p>
   </footer>
 </body>
