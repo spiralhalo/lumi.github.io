@@ -168,6 +168,12 @@ article.major > p {
     max-width: 40rem;
 }
 
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .badge-inactive,
 .badge {
     background: var(--theme-color);
