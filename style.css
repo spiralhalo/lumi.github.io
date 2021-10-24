@@ -105,7 +105,7 @@ main {
 }
 
 .dev {
-    background-image: linear-gradient(to bottom, #000000, transparent), url('img/screen1.jpg');
+    background-image: linear-gradient(to bottom, #000000, transparent), url('img/screen2.jpg');
 }
 
 .legacy {
