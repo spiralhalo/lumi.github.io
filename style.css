@@ -5,7 +5,7 @@
     --theme-sat: 72.3%;
     --theme-shade: 56.9%;
     --theme-color: hsl(var(--theme-hue), var(--theme-sat), var(--theme-shade));
-    --theme-dark: hsl(var(--theme-hue), calc(var(--theme-sat) - 20%), calc(var(--theme-shade) - 15%));
+    /* --theme-dark: hsl(var(--theme-hue), calc(var(--theme-sat) - 20%), calc(var(--theme-shade) - 15%)); */
 
     --gray-lite: hsl(0,0%,96%);
     --gray-medl: hsl(0,0%,74%);
@@ -27,7 +27,7 @@
     --text-color: var(--gray-lite);
     --border-color: var(--gray-lite);
     --bg-accent: var(--gray-medl);
-    --text-accent: var(--theme-dark);
+    --text-accent: var(--theme-color);
     --border-accent: black;
 }
 
@@ -35,10 +35,10 @@
     /* Primary Palette */
     --bg-color: var(--theme-color);
     --text-color: var(--gray-lite);
-    --border-color: var(--theme-dark);
-    --bg-accent: var(--theme-dark);
+    --border-color: var(--theme-color);
+    --bg-accent: var(--theme-color);
     --text-accent: var(--gray-lite);
-    --border-accent: var(--theme-dark);
+    --border-accent: var(--theme-color);
 }
 
 .secondary {
@@ -191,6 +191,10 @@ article > p {
     flex-grow: 1;
     line-height: 1.5rem;
     padding: 1.5rem .75rem;
+}
+
+em {
+    font-style: italic;
 }
 
 .buttons {
